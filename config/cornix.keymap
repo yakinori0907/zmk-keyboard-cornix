@@ -190,10 +190,10 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&none    &kp Q          &kp W         &kp E         &kp R                &kp T                      &kp Y      &kp U                &kp I            &kp O         &kp P             &kp BSLH
-&kp ESC  &hm_l LCTRL A  &hm_l LALT S  &hm_l LGUI D  &hm_shift_l LSHFT F  &kp G                      &kp H      &hm_shift_r RSHFT J  &hm_r RGUI K     &hm_r RALT L  &hm_r RCTRL SEMI  &kp SQT
-&mo 4    &hm_l LGUI Z   &kp X         &kp C         &kp V                &kp B        &none  &none  &kp N      &kp M                &kp COMMA        &kp DOT       &kp FSLH          &kp BACKSPACE
-&none    &none          &none         &lt 6 ESCAPE  &mo 2                &lt 5 SPACE                &kp ENTER  &mo 3                &lt 2 BACKSPACE  &none         &none             &none
+&none  &kp Q         &kp W         &kp E            &kp R                &kp T                      &kp Y      &kp U                &kp I         &kp O         &kp P             &none
+&none  &kp A         &hm_l LALT S  &hm_l LGUI D     &hm_shift_l LSHFT F  &kp G                      &kp H      &hm_shift_r RSHFT J  &hm_r RGUI K  &hm_r RALT L  &hm_r RCTRL SEMI  &none
+&none  &kp Z         &kp X         &kp C            &kp V                &kp B        &none  &none  &kp N      &kp M                &kp COMMA     &kp DOT       &kp FSLH          &none
+&none  &kp LEFT_GUI  &kp LEFT_ALT  &mt CARET LANG2  &lt 8 LANG1          &lt 5 SPACE                &kp ENTER  &mo 3                &none         &none         &none             &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -313,6 +313,33 @@
 &none       &none         &none         &none         &none         &none                         &none        &none  &none   &none  &none  &none
 &none       &none         &none         &none         &none         &bootloader   &trans  &trans  &bootloader  &none  &none   &none  &none  &none
 &none       &none         &none         &none         &none         &none                         &none        &none  &kp N7  &none  &none  &none
+            >;
+        };
+
+        layer_8 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_9 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_10 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
