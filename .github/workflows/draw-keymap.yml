@@ -21,7 +21,7 @@ jobs:
         # ここで自分のキーボードのパスを指定します
         run: |
           keymap parse -z config/cornix.keymap > cornix.yaml
-          keymap draw cornix.yaml > cornix.svg
+          keymap -c keymap_config.yaml draw cornix.yaml > cornix.svg
 
       - name: Commit and push
         run: |
