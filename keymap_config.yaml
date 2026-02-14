@@ -1,0 +1,5 @@
+draw_config:
+  # cornixの形状を定義（もし既存のレイアウトを流用する場合）
+  # cornixは3x6+3（crkbdに近い形状）なので、crkbdをベースに指定します
+  key_layout:
+    qmk_keyboard: crkbd/rev1
