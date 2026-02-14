@@ -20,8 +20,8 @@ jobs:
       - name: Draw keymap
         # ここで自分のキーボードのパスを指定します
         run: |
-          keymap parse -z config/boards/shields/cornix_lp/cornix_lp.keymap > cornix_lp.yaml
-          keymap draw cornix_lp.yaml > cornix_lp.svg
+          keymap parse -z config/cornix.keymap > cornix.yaml
+          keymap draw cornix.yaml > cornix.svg
 
       - name: Commit and push
         run: |
