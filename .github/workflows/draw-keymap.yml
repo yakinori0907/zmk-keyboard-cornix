@@ -1,0 +1,32 @@
+name: Draw ZMK keymaps
+on:
+  workflow_dispatch: # 手動実行用
+  push:
+    paths:
+      - "config/*.keymap" # keymapファイルが更新された時だけ動かす
+
+jobs:
+  draw:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # 画像をリポジトリに書き込むために必要
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: install keymap-drawer
+        run: pip install keymap-drawer
+
+      - name: Draw keymap
+        # ここで自分のキーボードのパスを指定します
+        run: |
+          keymap parse -z config/boards/shields/cornix_lp/cornix_lp.keymap > cornix_lp.yaml
+          keymap draw cornix_lp.yaml > cornix_lp.svg
+
+      - name: Commit and push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add cornix_lp.svg
+          git commit -m "Update keymap visualization" || exit 0
+          git push
